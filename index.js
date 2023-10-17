@@ -6,15 +6,15 @@ const server = http.createServer((req, res) => {
 });
 
 const PORT = process.env.PORT || 3000;
-server.listen(PORT, "0.0.0.0", () => {
+server.listen(PORT, "::", () => {
   console.log(`Server running and binding to all IPv4 addresses on port ${PORT}`);
 });
 
 // Handle SIGINT gracefully
-process.on('SIGINT', () => {
-  console.log('\nSIGINT signal received. Shutting down server...');
+process.on("SIGINT", () => {
+  console.log("\nSIGINT signal received. Shutting down server...");
   server.close(() => {
-    console.log('Server has been shut down.');
+    console.log("Server has been shut down.");
     process.exit(0);
   });
 });
