@@ -7,7 +7,7 @@ const server = http.createServer((req, res) => {
 
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, "::", () => {
-  console.log(`Server running and binding to all IPv4 addresses on port ${PORT}`);
+  console.log(`Server running and binding to all IP addresses on port ${PORT}`);
 });
 
 // Handle SIGINT gracefully
